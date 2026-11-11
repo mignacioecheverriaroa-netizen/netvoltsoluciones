@@ -22,5 +22,5 @@
 </IfModule>
 
 # La documentación interna no se publica
-RedirectMatch 404 ^/(docs/|README\.md)
+RedirectMatch 404 ^/(docs/|README\.md|LICENSE|\.github/)
 Options -Indexes

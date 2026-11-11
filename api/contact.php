@@ -1,4 +1,8 @@
 <?php
+/*
+ * © 2026 Ignacio Echeverría Roa · SDT. Todos los derechos reservados.
+ * Prohibida su copia, modificación o uso sin autorización. Ver LICENSE.
+ */
 /**
  * NETVOLT SOLUTIONS — Endpoint alternativo de contacto (hosting con PHP).
  * Se activa poniendo formProvider: "php" en js/config.js.

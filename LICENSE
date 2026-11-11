@@ -1,0 +1,39 @@
+Copyright (c) 2026 Ignacio Echeverría Roa — SDT, Soluciones en Desarrollo Tecnológico.
+Todos los derechos reservados. / All rights reserved.
+
+ESPAÑOL
+
+Este repositorio y todo su contenido (código fuente HTML, CSS, JavaScript y PHP,
+diseños, logotipos, ilustraciones, textos e imágenes) son obra protegida por la
+legislación de propiedad intelectual y derecho de autor.
+
+Se publica únicamente con fines de exhibición como portafolio profesional.
+Puede ser visualizado en GitHub, pero NO se concede ninguna licencia ni permiso para:
+
+  - copiar, reproducir o descargar el código o los recursos para usarlos;
+  - modificarlo o crear obras derivadas;
+  - distribuirlo, publicarlo, sublicenciarlo o venderlo;
+  - utilizarlo, total o parcialmente, en proyectos personales o comerciales;
+  - utilizar las marcas y logotipos "NetVolt Solutions" o "SDT".
+
+Cualquier uso requiere autorización previa y por escrito del autor.
+
+Las bibliotecas de terceros incluidas en assets/vendor/ (Bootstrap y Bootstrap
+Icons, licencia MIT) y las fuentes en assets/fonts/ (Inter y Space Grotesk,
+SIL Open Font License) conservan sus propias licencias.
+
+ENGLISH
+
+This repository and all of its contents (HTML, CSS, JavaScript and PHP source
+code, designs, logos, illustrations, texts and images) are copyrighted works.
+
+It is published solely for display as a professional portfolio. It may be viewed
+on GitHub, but NO license or permission is granted to copy, reproduce, modify,
+create derivative works from, distribute, publish, sublicense, sell or use it,
+in whole or in part, nor to use the "NetVolt Solutions" or "SDT" marks and logos.
+
+Any use requires the author's prior written permission.
+
+Third-party libraries in assets/vendor/ (Bootstrap and Bootstrap Icons, MIT
+License) and fonts in assets/fonts/ (Inter and Space Grotesk, SIL Open Font
+License) remain under their respective licenses.

@@ -1,3 +1,7 @@
+/*!
+ * NetVolt Solutions — © 2026 Ignacio Echeverría Roa · SDT, Soluciones en Desarrollo Tecnológico.
+ * Todos los derechos reservados. Prohibida su copia, modificación o uso sin autorización. Ver LICENSE.
+ */
 /* ==========================================================================
    contact.js — validación, protección anti-spam y envío real del formulario
    No simula envíos: solo muestra éxito si el servicio confirma la recepción.

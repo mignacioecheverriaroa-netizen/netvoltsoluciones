@@ -1,84 +1,78 @@
-# NETVOLT SOLUTIONS — Sitio web corporativo
+<div align="center">
 
-Landing page corporativa *one page* para **NetVolt Solutions**: soluciones eléctricas, automatización IoT, eficiencia energética e integración industrial.
+<img src="assets/icons/netvolt-symbol.svg" alt="NetVolt Solutions" width="96">
 
-Sitio web creado por **SDT — Soluciones en Desarrollo Tecnológico**.
+# NetVolt Solutions — Sitio web corporativo
+
+**Landing page corporativa para una empresa de soluciones eléctricas, automatización IoT e integración industrial.**
+
+[**🌐 Ver sitio en vivo**](https://mignacioecheverriaroa-netizen.github.io/netvoltsoluciones/)
+
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)
+![Bootstrap](https://img.shields.io/badge/Bootstrap_5.3-7952B3?logo=bootstrap&logoColor=white)
+![PHP](https://img.shields.io/badge/PHP-777BB4?logo=php&logoColor=white)
+![Licencia](https://img.shields.io/badge/licencia-todos_los_derechos_reservados-red)
+
+</div>
 
 ---
 
-## Características
+![Portada del sitio NetVolt Solutions](.github/screenshots/desktop-hero.jpg)
 
-- Identidad visual nueva: logotipo horizontal, símbolo, versiones para fondo oscuro y claro, favicon y recursos SVG.
-- HTML5 semántico, CSS propio organizado por capas y JavaScript moderno sin frameworks.
-- **Bootstrap 5.3.3** y **Bootstrap Icons 1.11.3** servidos localmente (sin CDN).
-- Fuentes **Space Grotesk** e **Inter** alojadas localmente (sin llamadas a Google).
-- Huincha animada infinita con duplicación estructural (sin saltos), pausa al pasar el cursor y soporte de `prefers-reduced-motion`.
-- Catálogo de cuatro servicios con ilustraciones vectoriales propias, ficha «Más información» y botón «Cotizar» que preselecciona el servicio.
-- **WhatsApp operativo** con dos líneas privadas: los números no se muestran en la página y se guardan codificados.
-- **Formulario de cotización con envío real a correo** (FormSubmit) y alternativa PHP propia.
-- Validación en el navegador y en el servidor, sanitización, honeypot anti-spam, tiempo mínimo de llenado y límite de envíos.
-- SEO: metadatos, Open Graph, datos estructurados, `sitemap.xml`, `robots.txt` y manifest.
-- Seguridad: Content-Security-Policy, cabeceras para Netlify (`_headers`) y Apache (`.htaccess`).
-- Responsive para escritorio, notebook, tablet y smartphone.
+## Sobre el proyecto
 
-## Estructura
+Proyecto desarrollado desde cero: identidad visual, logotipo, diseño de interfaz, maquetación, interacción y configuración de envío de formularios. El objetivo fue construir un sitio con nivel de agencia, sin plantillas, con una arquitectura frontend ordenada, rápida y mantenible.
+
+**Autor:** Ignacio Echeverría Roa — Analista Programador
+**Desarrollado por:** SDT — Soluciones en Desarrollo Tecnológico
+
+## Funcionalidades destacadas
+
+- **Identidad de marca propia:** logotipo con rayo y red de nodos, versiones para fondo oscuro y claro, favicon e ilustraciones vectoriales (SVG).
+- **Diseño responsive** probado en escritorio, tablet y celular, con menú móvil accesible.
+- **Huincha animada infinita** con CSS puro, sin saltos, pausa al pasar el cursor y respeto por `prefers-reduced-motion`.
+- **Catálogo de servicios** con fichas dinámicas (modales) y botones que preseleccionan el servicio en el formulario.
+- **Formulario de cotización real:** validación en cliente y servidor, sanitización, honeypot anti-spam, tiempo mínimo de llenado y límite de reenvíos. Envío por FormSubmit o por un endpoint PHP propio.
+- **WhatsApp con números privados:** los números no se muestran en la página y se decodifican solo al abrir el chat.
+- **SEO y rendimiento:** metadatos, Open Graph, datos estructurados, sitemap, carga diferida de imágenes, fuentes y librerías servidas localmente.
+- **Seguridad:** Content-Security-Policy, cabeceras para Netlify y Apache, sin scripts de terceros.
+
+## Capturas
+
+| Catálogo de servicios | Contacto y cotización |
+|---|---|
+| ![Servicios](.github/screenshots/desktop-servicios.jpg) | ![Contacto](.github/screenshots/desktop-contacto.jpg) |
+
+<p align="center"><img src=".github/screenshots/mobile-hero.jpg" alt="Versión móvil" width="280"></p>
+
+## Tecnologías
+
+| Área | Herramientas |
+|---|---|
+| Estructura | HTML5 semántico, accesibilidad (ARIA, navegación por teclado) |
+| Estilos | CSS3 con variables, arquitectura por capas, Bootstrap 5.3 como base de grilla |
+| Interacción | JavaScript moderno (ES2020+), IntersectionObserver, Fetch API |
+| Backend opcional | PHP 8 (validación, rate limiting, protección contra inyección de cabeceras) |
+| Diseño | SVG generado y optimizado, tipografías Space Grotesk e Inter |
+| Publicación | GitHub Pages / Netlify / cPanel |
+
+## Arquitectura
 
 ```
-NETVOLT-SOLUTIONS/
-├── index.html
-├── README.md
-├── favicon.ico
-├── robots.txt
-├── sitemap.xml
-├── site.webmanifest
-├── _headers                 ← cabeceras de seguridad (Netlify / Cloudflare Pages)
-├── .htaccess                ← cabeceras y caché (Apache / cPanel)
-├── api/
-│   └── contact.php          ← envío alternativo por PHP (opcional)
-├── assets/
-│   ├── fonts/               ← Inter y Space Grotesk (woff2 variables)
-│   ├── icons/               ← logotipos, símbolo, favicon e íconos de app
-│   ├── img/                 ← ilustraciones, pieza de marca (netvolt-brand), Open Graph, logo SDT
-│   └── vendor/              ← Bootstrap 5.3.3 y Bootstrap Icons
-├── css/
-│   ├── variables.css        ← paleta, tipografía y tokens
-│   ├── base.css
-│   ├── layout.css
-│   ├── components.css
-│   ├── animations.css
-│   └── responsive.css
-├── js/
-│   ├── config.js            ← ⚙️ números de WhatsApp, correo y opciones del formulario
-│   ├── main.js
-│   ├── navigation.js
-│   ├── animations.js
-│   ├── services.js
-│   └── contact.js
-└── docs/
-    └── configuracion.md     ← activación del correo y publicación paso a paso
+├── index.html          Estructura semántica de la landing
+├── css/                variables · base · layout · components · animations · responsive
+├── js/                 config · main · navigation · animations · services · contact
+├── api/contact.php     Endpoint alternativo de envío de correo
+├── assets/             icons · img · fonts · vendor (Bootstrap)
+└── docs/               Guía de configuración y publicación
 ```
 
-## Ejecutar en local
+## Derechos de autor
 
-1. Descomprime el ZIP y abre la carpeta `NETVOLT-SOLUTIONS` en **Visual Studio Code**.
-2. Instala la extensión recomendada **Live Server** (VS Code la sugiere automáticamente).
-3. Clic derecho sobre `index.html` → **Open with Live Server**.
+© 2026 Ignacio Echeverría Roa — SDT, Soluciones en Desarrollo Tecnológico. **Todos los derechos reservados.**
 
-> El sitio se ve correctamente abriendo `index.html` con doble clic, pero **el formulario solo envía cuando se sirve desde un servidor** (Live Server o el sitio publicado). Es una restricción de seguridad del navegador y del servicio de correo.
+Este repositorio se publica **solo para exhibición como portafolio**. Puedes verlo, pero no está permitido copiar, modificar, distribuir ni usar el código, los diseños o los logotipos sin autorización escrita. Ver [LICENSE](LICENSE).
 
-Alternativa sin VS Code: `python -m http.server 8000` dentro de la carpeta y abrir `http://localhost:8000`.
-
-## Publicar y activar el formulario
-
-Ver **[docs/configuracion.md](docs/configuracion.md)**. Resumen:
-
-1. Publica la carpeta (Netlify Drop, Vercel, GitHub Pages o tu hosting cPanel).
-2. Envía una solicitud de prueba desde el sitio publicado.
-3. Abre el correo de **FormSubmit** que llega a la casilla configurada y pulsa **Activate Form**.
-4. Desde ese momento, todas las solicitudes llegan a ese correo.
-
-## Créditos
-
-- Diseño, desarrollo e identidad visual: **SDT — Soluciones en Desarrollo Tecnológico**.
-- Bootstrap y Bootstrap Icons © The Bootstrap Authors (licencia MIT).
-- Inter y Space Grotesk (SIL Open Font License).
+¿Te interesa un proyecto similar? Contáctame a través de mi perfil de GitHub.
