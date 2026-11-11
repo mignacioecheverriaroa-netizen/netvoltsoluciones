@@ -85,8 +85,18 @@
     const link = NV.$("#nvEmailLink");
     if (!email || !wrap || !link) return;
     link.href = "mailto:" + email;
-    link.textContent = email;
+    const at = email.indexOf("@");
+    link.textContent = at > 0 ? email.slice(0, at) : email;
+    if (at > 0) { link.append(document.createElement("wbr"), email.slice(at)); }
+    link.classList.add("nv-channel__value--email");
     wrap.hidden = false;
+    const fe = NV.$("#nvFooterEmail");
+    if (fe) {
+      const a = NV.$("[data-public-email]", fe);
+      a.href = "mailto:" + email;
+      NV.$("span", a).textContent = email;
+      fe.hidden = false;
+    }
   }
 
   document.addEventListener("DOMContentLoaded", () => {

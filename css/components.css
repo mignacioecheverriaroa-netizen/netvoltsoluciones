@@ -596,3 +596,4 @@
   transition: border-color .3s, color .3s, transform .3s var(--nv-ease);
 }
 .nv-channel--link:hover .nv-channel__go { border-color: #25D366; color: #25D366; transform: translate(2px, -2px); }
+.nv-channel__value--email { font-size: 1rem; word-break: normal; overflow-wrap: anywhere; }

@@ -7,7 +7,7 @@
 declare(strict_types=1);
 
 /* ===== CONFIGURACIÓN ===== */
-const NV_TO      = 'm.ignacio.echeverria.roa@gmail.com';   // Correo que recibe las solicitudes
+const NV_TO      = 'servicioselectricos.dev@outlook.com';   // Correo que recibe las solicitudes
 const NV_FROM    = 'no-reply@TU-DOMINIO.cl';                // Remitente del mismo dominio del hosting
 const NV_SUBJECT = 'Nueva solicitud de cotización — NetVolt Solutions';
 const NV_COOLDOWN = 60;                                     // segundos entre envíos por IP

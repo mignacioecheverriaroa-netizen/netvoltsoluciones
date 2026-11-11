@@ -26,13 +26,13 @@ window.NV_CONFIG = Object.freeze({
   /* Correo que recibe las solicitudes (FormSubmit).
      Tras activar el formulario, puedes reemplazarlo por el alias cifrado que te envía
      FormSubmit (ej.: "a1b2c3d4e5f6...") para no exponer el correo en el código. */
-  formEmail: "m.ignacio.echeverria.roa@gmail.com",
+  formEmail: "servicioselectricos.dev@outlook.com",
 
   /* Asunto de los correos recibidos */
   formSubject: "Nueva solicitud de cotización — NetVolt Solutions",
 
   /* Correo visible en la sección Contacto. Déjalo vacío ("") para ocultarlo. */
-  publicEmail: "",
+  publicEmail: "servicioselectricos.dev@outlook.com",
 
   /* Segundos mínimos entre el ingreso a la página y el envío (anti-bots) */
   minFillSeconds: 4,

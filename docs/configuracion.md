@@ -36,7 +36,7 @@ Configuración actual:
 
 ```js
 formProvider: "formsubmit",
-formEmail: "m.ignacio.echeverria.roa@gmail.com",
+formEmail: "servicioselectricos.dev@outlook.com",
 ```
 
 ### Activación (una sola vez)
@@ -44,7 +44,7 @@ formEmail: "m.ignacio.echeverria.roa@gmail.com",
 1. Publica el sitio (paso 4) o ábrelo con Live Server.
 2. Completa y envía el formulario una vez.
 3. El sitio mostrará «Formulario pendiente de activación».
-4. Revisa la bandeja de entrada de `formEmail` (y la carpeta de spam): llega un correo de **FormSubmit** con el botón **Activate Form**. Púlsalo.
+4. Revisa la bandeja de entrada de `formEmail` en Outlook (y la carpeta **Correo no deseado**): llega un correo de **FormSubmit** con el botón **Activate Form**. Púlsalo.
 5. Envía otra solicitud de prueba: ahora llegará el correo con la tabla de datos y el sitio mostrará «¡Solicitud enviada!».
 
 > Si publicas en otro dominio después de activar, puede pedirse una nueva activación para ese dominio.
@@ -63,7 +63,7 @@ Cambia `formEmail` por el nuevo correo y repite la activación.
 
 ### Correo visible en la página
 
-`publicEmail: ""` lo deja oculto. Si escribes un correo (por ejemplo `contacto@tudominio.cl`), aparecerá en la sección Contacto con enlace `mailto:`.
+`publicEmail` está configurado con `servicioselectricos.dev@outlook.com` y aparece en la sección Contacto y en el pie de página con enlace `mailto:`. Si lo dejas vacío (`""`), se oculta.
 
 ## 3. Alternativa: envío por PHP (hosting cPanel)
 
