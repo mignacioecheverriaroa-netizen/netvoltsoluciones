@@ -1,5 +1,5 @@
 /*!
- * NetVolt Solutions — © 2026 Ignacio Echeverría Roa · SDT, Soluciones en Desarrollo Tecnológico.
+ * NetVolt Solutions — © 2026 Miguel Ignacio Echeverria Roa · SDT, Soluciones en Desarrollo Tecnológico.
  * Todos los derechos reservados. Prohibida su copia, modificación o uso sin autorización. Ver LICENSE.
  */
 /* ==========================================================================

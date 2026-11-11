@@ -25,7 +25,7 @@
 
 Proyecto desarrollado desde cero: identidad visual, logotipo, diseño de interfaz, maquetación, interacción y configuración de envío de formularios. El objetivo fue construir un sitio con nivel de agencia, sin plantillas, con una arquitectura frontend ordenada, rápida y mantenible.
 
-**Autor:** Ignacio Echeverría Roa — Analista Programador
+**Autor:** Miguel Ignacio Echeverria Roa — Analista Programador
 **Desarrollado por:** SDT — Soluciones en Desarrollo Tecnológico
 
 ## Funcionalidades destacadas
@@ -71,7 +71,7 @@ Proyecto desarrollado desde cero: identidad visual, logotipo, diseño de interfa
 
 ## Derechos de autor
 
-© 2026 Ignacio Echeverría Roa — SDT, Soluciones en Desarrollo Tecnológico. **Todos los derechos reservados.**
+© 2026 Miguel Ignacio Echeverria Roa — SDT, Soluciones en Desarrollo Tecnológico. **Todos los derechos reservados.**
 
 Este repositorio se publica **solo para exhibición como portafolio**. Puedes verlo, pero no está permitido copiar, modificar, distribuir ni usar el código, los diseños o los logotipos sin autorización escrita. Ver [LICENSE](LICENSE).
 

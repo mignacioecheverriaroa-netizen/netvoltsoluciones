@@ -1,6 +1,6 @@
 <?php
 /*
- * © 2026 Ignacio Echeverría Roa · SDT. Todos los derechos reservados.
+ * © 2026 Miguel Ignacio Echeverria Roa · SDT. Todos los derechos reservados.
  * Prohibida su copia, modificación o uso sin autorización. Ver LICENSE.
  */
 /**
