@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0D1C40"/><stop offset="1" stop-color="#060E22"/></linearGradient>
+  <linearGradient id="ln" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#1F6BFF"/><stop offset="1" stop-color="#6FE0D8"/></linearGradient>
+  <radialGradient id="glow" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#1F6BFF" stop-opacity=".45"/><stop offset="1" stop-color="#1F6BFF" stop-opacity="0"/></radialGradient>
+  <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0v32" fill="none" stroke="#5CC8FF" stroke-opacity=".07"/></pattern>
+  <filter id="soft" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="640" height="400" fill="url(#bg)"/>
+<rect width="640" height="400" fill="url(#grid)"/>
+<ellipse cx="320" cy="210" rx="250" ry="170" fill="url(#glow)"/>
+<g fill="none" stroke="#5CC8FF" stroke-opacity=".18" stroke-width="1.5">
+  <path d="M0 330h90l24-24h70"/><circle cx="188" cy="306" r="4"/>
+  <path d="M640 70h-80l-22 22h-60"/><circle cx="474" cy="92" r="4"/>
+</g>
+<g filter="url(#soft)" fill="none" stroke="url(#ln)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+
+  <rect x="110" y="96" width="300" height="200" rx="14"/>
+  <path d="M110 128h300" stroke-width="2.5"/>
+  <circle cx="130" cy="112" r="3" fill="#5CC8FF"/><circle cx="144" cy="112" r="3" fill="#5CC8FF"/>
+  <path d="M136 250l40-36 34 22 46-62 38 28 46-48 42 30" />
+  <path d="M136 270h250" stroke-opacity=".5" stroke-width="2"/>
+  <circle cx="256" cy="174" r="6" fill="#FFD23F" stroke="#FFD23F"/>
+  <path d="M220 296v30m80-30v30m-120 0h160"/>
+  <path d="M500 330V190m-20 0h40"/>
+  <path d="M478 168a30 30 0 0 1 44 0m-62-20a56 56 0 0 1 80 0m-98-20a82 82 0 0 1 116 0" stroke="#FFD23F" stroke-width="3"/>
+  <circle cx="500" cy="186" r="6"/>
+  <path d="M410 240h40l24 -30" stroke-dasharray="2 9"/>
+
+</g>
+</svg>

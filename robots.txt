@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /docs/
+
+# Reemplaza TU-DOMINIO.cl por el dominio real al publicar (ver docs/configuracion.md)
+Sitemap: https://TU-DOMINIO.cl/sitemap.xml

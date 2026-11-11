@@ -1,0 +1,284 @@
+/* ==========================================================================
+   Layout: header, hero, secciones y footer
+   ========================================================================== */
+
+/* ---------- Header ---------- */
+.nv-header {
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+  transition: background-color .35s var(--nv-ease), border-color .35s, box-shadow .35s;
+  border-bottom: 1px solid transparent;
+}
+.nv-header .navbar { min-height: var(--nv-header-h); padding: .75rem 0; }
+.nv-header.is-scrolled {
+  background: rgba(4, 10, 24, .72);
+  -webkit-backdrop-filter: blur(16px) saturate(140%);
+  backdrop-filter: blur(16px) saturate(140%);
+  border-bottom-color: var(--nv-border);
+  box-shadow: 0 10px 30px -20px rgba(0, 0, 0, .8);
+}
+.nv-brand img { display: block; width: auto; height: 46px; }
+
+.nv-nav .nav-link {
+  position: relative;
+  padding: .55rem 1rem !important;
+  font-size: .94rem;
+  font-weight: 500;
+  color: var(--nv-text-soft);
+  transition: color .25s var(--nv-ease);
+}
+.nv-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 1rem;
+  right: 1rem;
+  bottom: .2rem;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--nv-grad-electric);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .35s var(--nv-ease);
+}
+.nv-nav .nav-link:hover,
+.nv-nav .nav-link.active { color: var(--nv-white); }
+.nv-nav .nav-link.active::after,
+.nv-nav .nav-link:hover::after { transform: scaleX(1); }
+
+/* Botón hamburguesa propio */
+.nv-burger {
+  display: inline-grid;
+  place-content: center;
+  gap: 5px;
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  border: 1px solid var(--nv-border-strong);
+  background: rgba(14, 32, 71, .6);
+}
+.nv-burger span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--nv-white);
+  transition: transform .3s var(--nv-ease), opacity .2s;
+}
+.nv-burger[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nv-burger[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.nv-burger[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* ---------- Hero ---------- */
+.nv-hero {
+  position: relative;
+  min-height: calc(100svh - var(--nv-header-h));
+  display: flex;
+  align-items: center;
+  padding: clamp(2.5rem, 5vw, 5rem) 0 clamp(5rem, 8vw, 7rem);
+  margin-top: calc(var(--nv-header-h) * -1);
+  padding-top: calc(var(--nv-header-h) + clamp(2rem, 5vw, 4rem));
+  overflow: hidden;
+  isolation: isolate;
+}
+.nv-hero__bg { position: absolute; inset: 0; z-index: -1; }
+.nv-hero__grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(92, 200, 255, .06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(92, 200, 255, .06) 1px, transparent 1px);
+  background-size: 56px 56px;
+  -webkit-mask-image: radial-gradient(ellipse 70% 70% at 70% 45%, #000 20%, transparent 75%);
+  mask-image: radial-gradient(ellipse 70% 70% at 70% 45%, #000 20%, transparent 75%);
+}
+.nv-hero__beam {
+  position: absolute;
+  height: 1px;
+  width: 42%;
+  background: linear-gradient(90deg, transparent, var(--nv-cyan), transparent);
+  opacity: .5;
+}
+.nv-hero__beam--1 { top: 12%; right: 5%; width: 30%; }
+.nv-hero__beam--2 { bottom: 18%; right: -12%; }
+
+.nv-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: .65rem;
+  padding: .45rem 1rem .45rem .8rem;
+  margin-bottom: 1.6rem;
+  border: 1px solid var(--nv-border-strong);
+  border-radius: 999px;
+  background: rgba(14, 32, 71, .55);
+  font-size: .8rem;
+  font-weight: 500;
+  letter-spacing: .06em;
+  color: var(--nv-ice);
+}
+.nv-eyebrow__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--nv-yellow);
+  box-shadow: 0 0 0 4px rgba(255, 210, 63, .18);
+}
+
+.nv-hero__title {
+  font-size: var(--nv-fs-display);
+  text-transform: uppercase;
+  letter-spacing: -.025em;
+  line-height: 1.02;
+  margin-bottom: 1.5rem;
+}
+.nv-hero__title .nv-text-grad { display: block; }
+.nv-hero__lead {
+  max-width: 34rem;
+  font-size: var(--nv-fs-lead);
+  color: var(--nv-text-soft);
+  margin-bottom: 2.2rem;
+}
+.nv-hero__actions { display: flex; flex-wrap: wrap; gap: .9rem; margin-bottom: 2.6rem; }
+
+.nv-hero__pillars {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem 1.6rem;
+  padding: 1.2rem 0 0;
+  margin: 0;
+  list-style: none;
+  border-top: 1px solid var(--nv-border);
+  font-size: .9rem;
+  color: var(--nv-text-muted);
+}
+.nv-hero__pillars i { color: var(--nv-cyan); margin-right: .35rem; }
+
+.nv-hero__art { position: relative; margin: 0 auto; max-width: 580px; }
+.nv-core { display: block; width: 100%; height: auto; }
+
+.nv-chip {
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .6rem .95rem;
+  border: 1px solid var(--nv-border-strong);
+  border-radius: 12px;
+  background: rgba(7, 18, 48, .82);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  font-size: .82rem;
+  font-weight: 500;
+  color: var(--nv-ice);
+  box-shadow: var(--nv-shadow);
+}
+.nv-chip i { color: var(--nv-yellow); }
+.nv-chip--a { top: 7%; left: 0; }
+.nv-chip--b { bottom: 9%; right: 0; }
+.nv-chip--b i { color: var(--nv-cyan); }
+
+.nv-scroll {
+  position: absolute;
+  left: 50%;
+  bottom: 1.6rem;
+  width: 26px;
+  height: 42px;
+  border: 2px solid var(--nv-border-strong);
+  border-radius: 14px;
+  transform: translateX(-50%);
+}
+.nv-scroll span {
+  position: absolute;
+  top: 7px;
+  left: 50%;
+  width: 4px;
+  height: 8px;
+  margin-left: -2px;
+  border-radius: 2px;
+  background: var(--nv-cyan);
+}
+
+/* ---------- Secciones ---------- */
+.nv-section { position: relative; padding: var(--nv-section-y) 0; }
+.nv-section-head { max-width: 46rem; margin-bottom: clamp(2.5rem, 5vw, 4rem); }
+
+.nv-about::before,
+.nv-method::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(600px 300px at 0% 50%, rgba(31, 107, 255, .1), transparent 70%);
+}
+
+.nv-services {
+  background:
+    linear-gradient(180deg, transparent, rgba(10, 24, 56, .65) 15%, rgba(10, 24, 56, .65) 85%, transparent);
+}
+
+.nv-contact {
+  background:
+    radial-gradient(700px 400px at 100% 30%, rgba(31, 107, 255, .14), transparent 70%);
+}
+
+/* ---------- Footer ---------- */
+.nv-footer {
+  position: relative;
+  padding: 4.5rem 0 6.5rem;
+  background: var(--nv-navy-900);
+  border-top: 1px solid var(--nv-border);
+}
+.nv-footer__line {
+  position: absolute;
+  top: -1px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--nv-blue) 30%, var(--nv-cyan) 60%, transparent);
+}
+.nv-footer__desc { max-width: 22rem; margin-top: 1.2rem; font-size: .93rem; color: var(--nv-text-muted); }
+.nv-footer__title {
+  font-size: .78rem;
+  font-weight: 600;
+  letter-spacing: var(--nv-tracking-label);
+  text-transform: uppercase;
+  color: var(--nv-white);
+  margin-bottom: 1.2rem;
+}
+.nv-footer__list { list-style: none; padding: 0; margin: 0; display: grid; gap: .65rem; font-size: .93rem; }
+.nv-footer__list a { color: var(--nv-text-muted); }
+.nv-footer__list a:hover { color: var(--nv-white); }
+.nv-footer__list--contact i { color: var(--nv-cyan); margin-right: .35rem; }
+
+.nv-footer__bottom {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-top: 3.5rem;
+  padding-top: 1.8rem;
+  border-top: 1px solid var(--nv-border);
+  font-size: .86rem;
+  color: var(--nv-graphite-400);
+}
+.nv-footer__bottom .nv-linkbtn { margin-left: .75rem; color: var(--nv-text-muted); }
+
+/* Crédito de la agencia creadora */
+.nv-credit {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  padding: .55rem 1rem .55rem 1.1rem;
+  border: 1px solid rgba(160, 120, 255, .25);
+  border-radius: 16px;
+  background: #0A0B16;
+}
+.nv-credit__label {
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--nv-text-muted);
+}
+.nv-credit__logo { display: block; width: auto; height: 88px; border-radius: 8px; }

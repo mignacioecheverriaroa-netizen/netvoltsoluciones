@@ -1,0 +1,4 @@
+# Netlify: la documentación interna no se publica
+/docs/*      /404  404
+/README.md   /404  404
+/api/*       /404  404

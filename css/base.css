@@ -1,0 +1,112 @@
+/* ==========================================================================
+   Base: reset ligero, tipografía y utilidades propias
+   ========================================================================== */
+
+html { scroll-behavior: smooth; scroll-padding-top: calc(var(--nv-header-h) + 8px); }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+body {
+  font-family: var(--nv-font-body);
+  font-size: var(--nv-fs-body);
+  line-height: 1.65;
+  color: var(--nv-text-soft);
+  background: var(--nv-navy-950);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+/* Relieves horizontales sutiles en todo el lienzo */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    repeating-linear-gradient(180deg, rgba(92, 200, 255, .022) 0 1px, transparent 1px 6px),
+    radial-gradient(1200px 600px at 85% -10%, rgba(31, 107, 255, .14), transparent 60%),
+    radial-gradient(900px 500px at -10% 40%, rgba(31, 107, 255, .08), transparent 60%),
+    var(--nv-navy-950);
+}
+
+h1, h2, h3, h4, .nv-display {
+  font-family: var(--nv-font-display);
+  color: var(--nv-white);
+  letter-spacing: -.02em;
+  line-height: 1.08;
+  font-weight: 700;
+}
+
+p { margin-bottom: 1rem; }
+a { color: var(--nv-cyan); text-decoration: none; transition: color .2s var(--nv-ease); }
+a:hover { color: var(--nv-white); }
+img, svg { max-width: 100%; }
+img { height: auto; }
+
+::selection { background: var(--nv-blue); color: var(--nv-white); }
+
+:focus-visible {
+  outline: 2px solid var(--nv-yellow);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -60px;
+  z-index: 2000;
+  padding: .7rem 1.1rem;
+  border-radius: var(--nv-radius-sm);
+  background: var(--nv-yellow);
+  color: var(--nv-navy-950);
+  font-weight: 600;
+  transition: top .2s;
+}
+.skip-link:focus { top: 1rem; color: var(--nv-navy-950); }
+
+/* --- Jerarquía tipográfica --- */
+.nv-label {
+  display: inline-flex;
+  align-items: center;
+  gap: .75rem;
+  margin-bottom: 1.1rem;
+  font-family: var(--nv-font-display);
+  font-size: var(--nv-fs-label);
+  font-weight: 600;
+  letter-spacing: var(--nv-tracking-label);
+  text-transform: uppercase;
+  color: var(--nv-cyan);
+}
+.nv-label::before {
+  content: "";
+  width: 28px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--nv-yellow);
+}
+
+.nv-h2 { font-size: var(--nv-fs-h2); margin-bottom: 1.25rem; }
+.nv-h2--caps { letter-spacing: .01em; }
+.nv-lead { font-size: var(--nv-fs-lead); color: var(--nv-text-soft); line-height: 1.6; }
+.nv-text { color: var(--nv-text-muted); }
+
+.nv-text-grad {
+  background: var(--nv-grad-electric);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.nv-linkbtn {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--nv-cyan);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font: inherit;
+}
+.nv-linkbtn:hover { color: var(--nv-white); }

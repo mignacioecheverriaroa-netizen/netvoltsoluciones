@@ -1,0 +1,66 @@
+/* ==========================================================================
+   Responsive: notebook, tablet y smartphone
+   ========================================================================== */
+
+/* Notebook */
+@media (max-width: 1199.98px) {
+  .nv-timeline { gap: 1rem; }
+  .nv-step p { font-size: .88rem; }
+}
+
+/* Tablet y menú móvil */
+@media (max-width: 991.98px) {
+  :root { --nv-header-h: 68px; }
+  .nv-brand img { height: 34px; }
+
+  .nv-header .navbar-collapse {
+    margin-top: .8rem;
+    padding: 1rem;
+    border: 1px solid var(--nv-border-strong);
+    border-radius: var(--nv-radius);
+    background: rgba(4, 10, 24, .97);
+    box-shadow: var(--nv-shadow);
+  }
+  .nv-header:has(.navbar-collapse.show),
+  .nv-header:has(.navbar-collapse.collapsing) { background: rgba(4, 10, 24, .92); }
+  .nv-nav .nav-link { padding: .8rem .6rem !important; font-size: 1.02rem; border-bottom: 1px solid var(--nv-border); }
+  .nv-nav .nav-link::after { left: .6rem; right: auto; width: 24px; bottom: .45rem; }
+  .nv-header .navbar-collapse .nv-btn { width: 100%; margin-top: 1rem; }
+
+  .nv-hero { min-height: auto; }
+  .nv-hero__art { max-width: 480px; }
+  .nv-scroll { display: none; }
+
+  /* Línea de tiempo vertical */
+  .nv-timeline { grid-template-columns: 1fr; gap: 0; }
+  .nv-timeline::before { top: 0; bottom: 0; left: 31px; right: auto; width: 2px; height: auto; background: linear-gradient(180deg, var(--nv-blue), var(--nv-cyan), var(--nv-yellow)); }
+  .nv-timeline::after { display: none; }
+  .nv-step { display: grid; grid-template-columns: 64px 1fr; column-gap: 1.3rem; padding-bottom: 2rem; }
+  .nv-step:last-child { padding-bottom: 0; }
+  .nv-step__node { grid-row: span 3; margin-bottom: 0; }
+}
+
+/* Smartphone */
+@media (max-width: 575.98px) {
+  .nv-hero__actions .nv-btn { width: 100%; }
+  .nv-hero__pillars { gap: .5rem 1.1rem; font-size: .85rem; }
+  .nv-chip { font-size: .72rem; padding: .45rem .7rem; }
+  .nv-chip--a { top: 0; }
+  .nv-chip--b { bottom: 2%; }
+
+  .nv-service__body { padding: 1.3rem 1.25rem 1.4rem; }
+  .nv-service__actions .nv-btn { flex: 1 1 auto; }
+
+  .nv-value { flex-direction: column; align-items: flex-start; }
+  .nv-value__icon { flex-basis: auto; width: 44px; }
+  .nv-form__actions .nv-btn { width: 100%; }
+
+  .nv-footer__bottom { flex-direction: column; align-items: flex-start; }
+  .nv-footer__bottom .nv-linkbtn { margin: .5rem 0 0; display: block; }
+  .nv-credit { width: 100%; justify-content: space-between; }
+  .nv-credit { flex-direction: column; align-items: flex-start; gap: .6rem; }
+  .nv-credit__logo { height: auto; width: 100%; max-width: 300px; }
+
+  .nv-wa { right: 1rem; bottom: 1rem; }
+  .nv-wa__btn { width: 56px; height: 56px; }
+}

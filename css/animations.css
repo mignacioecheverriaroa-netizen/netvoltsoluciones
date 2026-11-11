@@ -1,0 +1,83 @@
+/* ==========================================================================
+   Animaciones (todas respetan prefers-reduced-motion)
+   ========================================================================== */
+
+/* Huincha: el track contiene 2 grupos idénticos → -50% = bucle perfecto */
+@keyframes nv-marquee {
+  from { transform: translate3d(0, 0, 0); }
+  to   { transform: translate3d(-50%, 0, 0); }
+}
+
+/* Pulsos de energía por las pistas del hero */
+.nv-pulse {
+  stroke-dasharray: 26 400;
+  stroke-dashoffset: 426;
+  animation: nv-flow 3.6s linear infinite;
+}
+.nv-pulse--d2 { animation-delay: -.9s; }
+.nv-pulse--d3 { animation-delay: -1.8s; }
+.nv-pulse--d4 { animation-delay: -2.7s; }
+@keyframes nv-flow { to { stroke-dashoffset: 0; } }
+
+.nv-core__ring { transform-origin: 280px 280px; animation: nv-spin 60s linear infinite; }
+.nv-core__ring--rev { animation-direction: reverse; animation-duration: 40s; }
+@keyframes nv-spin { to { transform: rotate(360deg); } }
+
+.nv-spark { animation: nv-blink 2.8s ease-in-out infinite; }
+@keyframes nv-blink { 0%, 100% { opacity: 1; } 50% { opacity: .35; } }
+
+.nv-chip--a { animation: nv-float 7s ease-in-out infinite; }
+.nv-chip--b { animation: nv-float 7s ease-in-out -3.5s infinite; }
+@keyframes nv-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+
+.nv-scroll span { animation: nv-scrolldot 2s var(--nv-ease) infinite; }
+@keyframes nv-scrolldot { 0% { transform: translateY(0); opacity: 1; } 70% { transform: translateY(14px); opacity: 0; } 100% { opacity: 0; } }
+
+.nv-eyebrow__dot { animation: nv-ping 2.4s ease-out infinite; }
+@keyframes nv-ping { 0% { box-shadow: 0 0 0 0 rgba(255, 210, 63, .45); } 100% { box-shadow: 0 0 0 10px rgba(255, 210, 63, 0); } }
+
+@keyframes nv-travel {
+  0% { transform: translateX(0); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateX(calc(var(--nv-tl-w, 900px) - 60px)); opacity: 0; }
+}
+
+@keyframes nv-pop { from { opacity: 0; transform: translateY(8px) scale(.97); } to { opacity: 1; transform: none; } }
+
+/* Aparición al hacer scroll (solo si JS está activo) */
+.js [data-reveal] {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity .8s var(--nv-ease), transform .8s var(--nv-ease);
+  transition-delay: var(--reveal-delay, 0s);
+}
+.js [data-reveal].is-visible { opacity: 1; transform: none; }
+
+/* ---------- Movimiento reducido ---------- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .001ms !important;
+  }
+  .nv-ticker__track { animation: none !important; transform: none !important; width: auto; justify-content: center; }
+  .nv-ticker__group { flex-wrap: wrap; justify-content: center; row-gap: .4rem; }
+  .nv-ticker__group[aria-hidden="true"],
+  .nv-ticker__group li[aria-hidden="true"]:not(.nv-ticker__sep),
+  .nv-ticker__group li[aria-hidden="true"]:not(.nv-ticker__sep) + .nv-ticker__sep { display: none; }
+  .nv-pulse { stroke-dasharray: none; }
+  .nv-timeline::after { display: none; }
+  .js [data-reveal] { opacity: 1; transform: none; }
+}
+.nv-hero.is-offscreen *, .nv-hero.is-offscreen *::before { animation-play-state: paused !important; }
+
+/* Rayo del logotipo en el hero: destello eléctrico sutil */
+.nv-bolt { animation: nv-zap 4.5s ease-in-out infinite; }
+@keyframes nv-zap {
+  0%, 86%, 100% { opacity: 1; }
+  88% { opacity: .55; }
+  90% { opacity: 1; }
+  92% { opacity: .7; }
+  94% { opacity: 1; }
+}

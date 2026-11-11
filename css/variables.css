@@ -1,0 +1,90 @@
+/* ==========================================================================
+   NETVOLT SOLUTIONS — Tokens de diseño
+   Toda la paleta, tipografía y espaciado se centraliza aquí.
+   ========================================================================== */
+
+@font-face {
+  font-family: "Inter";
+  src: url("../assets/fonts/inter-var-latin.woff2") format("woff2-variations"),
+       url("../assets/fonts/inter-var-latin.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("../assets/fonts/space-grotesk-var-latin.woff2") format("woff2-variations"),
+       url("../assets/fonts/space-grotesk-var-latin.woff2") format("woff2");
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* --- Paleta principal --- */
+  --nv-navy-950: #040A18;   /* Azul marino profundo: fondo base */
+  --nv-navy-900: #071230;
+  --nv-navy-850: #0A1838;
+  --nv-navy-800: #0E2047;
+  --nv-navy-700: #16305F;
+
+  --nv-blue: #1F6BFF;       /* Azul eléctrico: color protagonista */
+  --nv-blue-600: #1557DB;
+  --nv-blue-400: #4D8DFF;
+  --nv-cyan: #5CC8FF;       /* Azul tecnológico claro: superficies y detalles */
+  --nv-ice: #E8F1FF;
+
+  --nv-white: #FFFFFF;
+  --nv-yellow: #FFD23F;     /* Amarillo energético: acentos estratégicos */
+  --nv-yellow-600: #F2B705;
+
+  --nv-graphite: #2A3242;   /* Gris grafito: elementos secundarios */
+  --nv-graphite-400: #5C6880;
+  --nv-text-muted: #A7B6D3;
+  --nv-text-soft: #C9D5EC;
+
+  --nv-success: #2FD58A;
+  --nv-danger: #FF6B7A;
+
+  /* --- Superficies --- */
+  --nv-surface: rgba(16, 36, 80, .55);
+  --nv-surface-strong: rgba(18, 40, 88, .85);
+  --nv-border: rgba(92, 200, 255, .14);
+  --nv-border-strong: rgba(92, 200, 255, .32);
+
+  /* --- Gradientes --- */
+  --nv-grad-electric: linear-gradient(120deg, var(--nv-blue) 0%, var(--nv-cyan) 100%);
+  --nv-grad-surface: linear-gradient(160deg, rgba(22, 48, 104, .7) 0%, rgba(8, 20, 48, .7) 100%);
+
+  /* --- Tipografía --- */
+  --nv-font-display: "Space Grotesk", "Inter", system-ui, sans-serif;
+  --nv-font-body: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  --nv-fs-display: clamp(2.1rem, 1.25rem + 2.9vw, 3.75rem);
+  --nv-fs-h2: clamp(1.85rem, 1.25rem + 2.4vw, 3.1rem);
+  --nv-fs-h3: clamp(1.2rem, 1.05rem + .6vw, 1.5rem);
+  --nv-fs-lead: clamp(1.05rem, .98rem + .35vw, 1.25rem);
+  --nv-fs-body: 1rem;
+  --nv-fs-small: .875rem;
+  --nv-fs-label: .75rem;
+
+  --nv-tracking-label: .22em;
+
+  /* --- Espaciado y forma --- */
+  --nv-section-y: clamp(5rem, 3.5rem + 6vw, 9rem);
+  --nv-radius-sm: 10px;
+  --nv-radius: 18px;
+  --nv-radius-lg: 28px;
+
+  /* --- Sombras y luz --- */
+  --nv-shadow-sm: 0 4px 14px rgba(0, 6, 24, .35);
+  --nv-shadow: 0 18px 50px -18px rgba(0, 6, 24, .75);
+  --nv-glow: 0 0 0 1px rgba(92, 200, 255, .18), 0 20px 60px -20px rgba(31, 107, 255, .55);
+
+  /* --- Movimiento --- */
+  --nv-ease: cubic-bezier(.22, .8, .24, 1);
+  --nv-dur: .45s;
+
+  --nv-header-h: 76px;
+}
