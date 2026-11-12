@@ -1,4 +1,6 @@
-# Netlify: la documentación interna no se publica
-/docs/*      /404  404
-/README.md   /404  404
-/api/*       /404  404
+# Cloudflare Pages / Netlify: los archivos internos no se muestran en el sitio público
+/docs/*      /  301
+/README.md   /  301
+/LICENSE     /  301
+/api/*       /  301
+/.github/*   /  301
