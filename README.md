@@ -6,7 +6,7 @@
 
 **Landing page corporativa para una empresa de soluciones eléctricas, automatización IoT e integración industrial.**
 
-[**🌐 Ver sitio en vivo**](https://mignacioecheverriaroa-netizen.github.io/netvoltsoluciones/)
+[**🌐 Ver sitio en vivo**](https://netvolt.smartgridgroup.cl)
 
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)

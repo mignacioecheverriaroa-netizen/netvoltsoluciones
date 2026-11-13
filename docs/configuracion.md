@@ -96,6 +96,9 @@ Sube la carpeta como sitio estático, sin comando de build.
 
 ## 5. Dominio (SEO)
 
+Dominio actual: **https://netvolt.smartgridgroup.cl** (subdominio de smartgridgroup.cl, NIC Chile, DNS en Cloudflare). Ya está configurado en `sitemap.xml`, `robots.txt` y en las metaetiquetas de `index.html`.
+
+
 Cuando tengas el dominio definitivo, reemplaza `TU-DOMINIO.cl` en:
 
 - `sitemap.xml`
