@@ -94,6 +94,12 @@ El endpoint valida y sanitiza los datos, bloquea el honeypot, exige tiempo míni
 
 Sube la carpeta como sitio estático, sin comando de build.
 
+## 4.1 Publicación actual (GitHub Pages)
+
+El sitio se publica automáticamente con GitHub Actions (`.github/workflows/publicar.yml`) en cada cambio a `main`.
+Solo se publican los archivos públicos: `index.html`, `404.html`, `favicon.ico`, `robots.txt`, `sitemap.xml`,
+`site.webmanifest` y las carpetas `assets/`, `css/` y `js/`. La documentación, el PHP y la licencia **no** quedan accesibles en la web.
+
 ## 5. Dominio (SEO)
 
 Dominio actual: **https://netvolt.smartgridgroup.cl** (subdominio de smartgridgroup.cl, NIC Chile, DNS en Cloudflare). Ya está configurado en `sitemap.xml`, `robots.txt` y en las metaetiquetas de `index.html`.

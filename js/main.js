@@ -8,6 +8,14 @@
 (function () {
   "use strict";
 
+  /* Anti-clickjacking: el sitio no puede mostrarse dentro de un iframe ajeno
+     (GitHub Pages no permite enviar la cabecera X-Frame-Options). */
+  if (window.top !== window.self) {
+    document.documentElement.style.display = "none";
+    try { window.top.location.replace(window.location.href); } catch (_) { /* bloqueado por el navegador */ }
+    return;
+  }
+
   document.documentElement.classList.add("js");
 
   const CFG = window.NV_CONFIG || {};

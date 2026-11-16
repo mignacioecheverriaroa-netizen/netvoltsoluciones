@@ -119,7 +119,8 @@
           _subject: CFG.formSubject || "Nueva solicitud de cotización",
           _template: "table",
           _captcha: "false",
-          _honey: ""
+          _honey: "",
+          _blacklist: "casino, viagra, bitcoin, crypto, forex, loan, seo services, backlinks, porn"
         })
       });
       let json = {};

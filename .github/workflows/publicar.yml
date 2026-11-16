@@ -1,0 +1,45 @@
+# Publica en GitHub Pages SOLO los archivos públicos del sitio.
+# La documentación, el PHP, la licencia y la configuración del repositorio no se publican.
+name: Publicar sitio
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - name: Descargar código
+        uses: actions/checkout@v4
+
+      - name: Preparar archivos públicos
+        run: |
+          mkdir _site
+          cp -r index.html 404.html favicon.ico robots.txt sitemap.xml site.webmanifest assets css js _site/
+          echo "Archivos publicados:" && find _site -maxdepth 1
+
+      - name: Configurar Pages
+        uses: actions/configure-pages@v5
+
+      - name: Subir sitio
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - name: Publicar
+        id: deploy
+        uses: actions/deploy-pages@v4

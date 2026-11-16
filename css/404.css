@@ -1,0 +1,30 @@
+/*!
+ * NetVolt Solutions — © 2026 Miguel Ignacio Echeverria Roa · SDT, Soluciones en Desarrollo Tecnológico.
+ * Todos los derechos reservados. Prohibida su copia, modificación o uso sin autorización. Ver LICENSE.
+ */
+/* Página 404 */
+.nv-404 {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem 1.25rem;
+  text-align: center;
+}
+.nv-404__logo img { display: block; height: 46px; width: auto; margin-bottom: 1.5rem; }
+.nv-404__code {
+  margin: 0;
+  font-family: var(--nv-font-display);
+  font-size: clamp(5rem, 3rem + 10vw, 9rem);
+  font-weight: 700;
+  line-height: 1;
+  background: var(--nv-grad-electric);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.nv-404__title { font-size: clamp(1.5rem, 1.2rem + 1.4vw, 2.2rem); margin: 0; }
+.nv-404__text { max-width: 30rem; margin: 0; color: var(--nv-text-muted); }
+.nv-404__actions { display: flex; flex-wrap: wrap; gap: .8rem; justify-content: center; margin-top: 1rem; }
